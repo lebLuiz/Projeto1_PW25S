@@ -20,5 +20,6 @@ module.exports = {
     'no-underscore-dangle': 'off',
     'no-console': 'off',
     ident: 'off',
+    'prefer-promise-reject-errors': 'off',
   },
 };
