@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% set pageId = "page-home" %}
+
+{% block styles %}
+  <link rel="stylesheet" href="/styles/home.css">
+{% endblock styles %}
+
+{% block content %}
+  <div class="_content">
+    {% include "partials/header-sidebar.html" %}
+
+    <main>
+      <h1></h1>
+      <div class="_tag-type-user">
+        <strong></strong>
+      </div>
+    </main>
+  </div>
+{% endblock content %}
+
+{% block modal %}
+  {% include "partials/modal-register.html" %}
+{% endblock modal %}
+
+{% block scripts %}
+  <script type="module" src="/scripts/home.js"></script>
+{% endblock scripts %}

@@ -1,0 +1,73 @@
+{% extends "layout.html" %}
+
+{% set pageId = "page-register" %}
+
+{% block title %}
+  Register
+{% endblock title %}
+
+{% block styles %}
+  <link rel="stylesheet" href="/styles/register.css">
+{% endblock styles %}
+
+{% block content %}
+  <main>
+    <section class="_content">
+      <form id="_form-register">
+        <h1>Registrar nova conta</h1>
+
+        <fieldset>
+          <section class="_field-group">
+            <article class="_field">
+              <label for="name">* Nome</label>
+              <input
+                class="_default-input"
+                type="text"
+                name="name"
+                required="required">
+            </article>
+
+            <article class="_field">
+              <label for="email">* Email</label>
+              <input
+                class="_default-input"
+                type="email"
+                name="email"
+                required="required">
+            </article>
+
+            <article class="_field">
+              <label for="password">* Senha</label>
+              <input
+                class="_default-input"
+                type="password"
+                name="password"
+                required="required">
+            </article>
+
+            <article class="_field">
+              <label for="confirmPassword">* Confirmar senha</label>
+              <input
+                class="_default-input"
+                type="password"
+                name="confirmPassword"
+                required="required"
+                placeholder="Digite novamente a senha. Revise!">
+            </article>
+          </section>
+        </fieldset>
+
+        <button
+          class="_default-button"
+          type="submit"
+          id="_btn-submit">
+          Cadastrar
+        </button>
+      </form>
+    </section>
+  </main>
+{% endblock content %}
+
+{% block scripts %}
+  <script type="module" src="/scripts/register.js"></script>
+{% endblock scripts %}

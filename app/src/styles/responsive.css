@@ -1,0 +1,28 @@
+@media (max-width: 990px) {
+  #page-home::before {
+    background-size: 320px;
+    background-position: 96% 100%;
+  }
+  #page-home main h1 {
+    word-break: break-word;
+  }
+}
+
+@media (max-width: 768px) {
+  header .wrapper-links ul li a,
+  header .wrapper-links ul li button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 525px) {
+  #page-home::before {
+    background-size: 280px;
+  }
+}
+
+@media (max-width: 768px) and (max-height: 732px) {
+  #page-home::before {
+    background-size: 200px;
+  }
+}

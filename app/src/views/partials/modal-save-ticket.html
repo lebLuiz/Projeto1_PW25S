@@ -1,0 +1,54 @@
+<div id="modal-save-ticket" class="_default-modal hide">
+  <main>
+    <section class="content">
+      <header>
+        <h1>Cadastrar Ticket</h1>
+        <a href="#">Fechar</a>
+      </header>
+
+      <form id="_form-ticket" >
+        <fieldset>
+          <section class="_field-group">
+            <article class="_field">
+              <label for="title">* Titulo</label>
+              <input
+                class="_default-input"
+                name="title"
+                required="required"
+                minlength="4"
+                maxlength="45">
+            </article>
+
+            <article class="_field">
+              <label for="description">* Descrição detalhada</label>
+              <textarea
+                class="_default-input"
+                name="description"
+                required="required"
+                minlength="10"
+                maxlength="155">
+              </textarea>
+            </article>
+
+            <article class="_field">
+              <label for="category">* Categoria</label>
+              <select
+                class="_default-select"
+                name="category"
+                required="required">
+              </select>
+            </article>
+          </section>
+        </fieldset>
+
+        <button
+          class="_default-button"
+          type="submit"
+          id="_btn-submit">
+          Salvar
+          <img src="/assets/enviar.svg" alt="enviar">
+        </button>
+      </form>
+    </section>
+  </main>
+</div>

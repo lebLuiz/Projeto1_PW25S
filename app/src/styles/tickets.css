@@ -1,0 +1,20 @@
+#_table-body-tickets tr td._status {
+  width: 128px !important;
+  font-weight: 600 !important;
+}
+
+#_table-body-tickets tr td._status.--ABERTO {
+  color: #916405;
+}
+#_table-body-tickets tr td._status.--PENDENTE {
+  color: #df8c06;
+}
+#_table-body-tickets tr td._status.--EM_ESPERA {
+  color: #260078;
+}
+#_table-body-tickets tr td._status.--RESOLVIDO {
+  color: #008d2a;
+}
+#_table-body-tickets tr td._status.--FECHADO {
+  color: #646464;
+}

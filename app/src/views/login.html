@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+
+{% set pageId = "page-login" %}
+
+{% block title %}
+  Login
+{% endblock title %}
+
+{% block styles %}
+  <link rel="stylesheet" href="/styles/login.css">
+{% endblock styles %}
+
+{% block content %}
+  <main>
+    <section class="_content">
+      <form id="_form-login">
+        <h1>Login</h1>
+
+        <fieldset>
+          <section class="_field-group">
+            <article class="_field">
+              <label for="email">* Email</label>
+              <input
+                class="_default-input"
+                type="email"
+                name="email"
+                required="required">
+            </article>
+
+            <article class="_field">
+              <label for="password">* Senha</label>
+              <input
+                class="_default-input"
+                type="password"
+                name="password"
+                required="required">
+            </article>
+          </section>
+        </fieldset>
+
+        <div class="_wrapper-link-register">
+          <a href="/register">Cadastrar</a>
+        </div>
+
+        <button
+          class="_default-button"
+          type="submit"
+          id="_btn-submit">
+          Logar
+        </button>
+      </form>
+    </section>
+  </main>
+{% endblock content %}
+
+{% block scripts %}
+  <script type="module" src="/scripts/login.js"></script>
+{% endblock scripts %}

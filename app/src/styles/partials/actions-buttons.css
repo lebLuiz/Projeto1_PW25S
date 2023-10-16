@@ -1,0 +1,25 @@
+._actions {
+  height: 100%;
+  width: 250px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+._actions button {
+  margin-right: 5px;
+  padding: 5px 10px;
+  height: 38px;
+  background: var(--primary-neutral-50-opacity);
+  border: 1px solid var(--primary);
+  border-radius: 8px;
+  font-size: 14.75px;
+}
+
+._actions button:hover {
+  background: var(--primary-neutral-70-opacity);
+  transition: background .2s ease-in;
+}
+
+._actions button:active {
+  background: var(--primary-neutral-70-opacity);
+}

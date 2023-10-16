@@ -1,0 +1,50 @@
+<header>
+  <link rel="stylesheet" href="/styles/header-sidebar.css">
+
+  <a href="/" id="logomarca">
+    <img src="/assets/logo-company.png" alt="Logomarca">
+  </a>
+
+  <button
+    id="_btn-sidebar"
+    class="btn-open-sidebar">
+    <svg width="26" height="30" viewBox="0 0 26 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <line y1="2" x2="26" y2="2" stroke="black" stroke-width="4"/>
+      <line y1="15" x2="26" y2="15" stroke="black" stroke-width="4"/>
+      <line y1="28" x2="26" y2="28" stroke="black" stroke-width="4"/>
+    </svg>
+  </button>
+
+  <nav class="wrapper-links">
+    <ul>
+      <li>
+        <a href="/" class="a_link home">
+          <span></span>Home
+        </a>
+      </li>
+
+      <li id="_link-route-categories">
+        <a href="/categories" class="a_link categories">
+          <span></span>Categorias
+        </a>
+      </li>
+
+      <li>
+        <a href="/tickets" class="a_link tickets">
+          <span></span>Tickets
+        </a>
+      </li>
+
+      <li>
+        <button
+          id="_btn-exit"
+          type="button"
+          class="btn_exit">
+          <span></span>Sair
+        </button>
+      </li>
+    </ul>
+  </nav>
+
+  <script type="module" src="/scripts/header-sidebar.js"></script>
+</header>

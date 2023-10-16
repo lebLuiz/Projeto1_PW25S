@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/assets/icone.ico" type="image/x-icon" />
+
+    <title>
+      TICKETS
+      {% block title %}
+      {% endblock title %}
+    </title>
+
+    <link rel="stylesheet" href="/styles/main.css" type="text/css">
+
+    {% block styles %}
+    {% endblock styles %}
+
+    <link rel="stylesheet" href="/styles/responsive.css" type="text/css">
+  </head>
+
+  <body>
+    {% include "partials/loading.html" %}
+
+    <div id="{{ pageId }}">
+      {% block content %}
+      {% endblock content %}
+    </div>
+
+    {% block modal %}
+    {% endblock modal %}
+
+    {% block scripts %}
+    {% endblock scripts %}
+  </body>
+</html>

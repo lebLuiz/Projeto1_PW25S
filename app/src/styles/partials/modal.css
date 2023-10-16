@@ -1,0 +1,106 @@
+._default-modal {
+  background-color: #0E0A14ef;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 400ms;
+  z-index: 1;
+}
+
+._default-modal.hide {
+  display: none;
+}
+
+._default-modal main {
+  height: 100%;
+  overflow-y: auto;
+}
+
+._default-modal main .content {
+  background-color: whitesmoke;
+  box-shadow: 0px 0px 4.5px #4b2e00;
+  margin: 50px auto;
+  padding: 60px;
+  border-radius: 10px;
+  max-width: 760px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+._default-modal main .content header {
+  position: relative;
+}
+
+._default-modal main .content header a {
+  background-image: url('/assets/x_black.svg');
+  width: 20px;
+  height: 20px;
+  display: flex;
+  font-size: 0.01px;
+  position: absolute;
+  right: 0;
+  top: -50px;
+}
+
+._default-modal main .content form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+._default-modal main .content form h1 {
+  font-size: 36px;
+}
+
+._default-modal main .content form fieldset {
+  margin-top: 64px;
+  border: 0;
+  width: 100%;
+  max-width: 465px;
+}
+
+._default-modal main .content form legend {
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+._default-modal main .content form legend h2 {
+  font-size: 25px;
+}
+
+._default-modal main .content form legend span {
+  font-size: 14.5px;
+  color: var(--title-color);
+  margin-right: 20px;
+}
+
+._default-modal main .content form fieldset ._field-group label {
+  font-size: 16px;
+}
+
+._default-modal main .content form ._field {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 25px;
+}
+
+._default-modal main .content form ._field-group {
+  display: flex;
+  flex-direction: column;
+}
+
+._default-modal main .content form label {
+  font-size: 14px;
+  margin-bottom: 8px;
+}

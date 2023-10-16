@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+
+{% set pageId = "page-categories" %}
+
+{% block styles %}
+  <link rel="stylesheet" href="/styles/partials/header-page.css">
+  <link rel="stylesheet" href="/styles/partials/button.css">
+{% endblock styles %}
+
+{% block content %}
+  <div class="_content">
+    {% include "partials/header-sidebar.html" %}
+
+    <main>
+      <header class="_header-page">
+        <h1>Categorias</h1>
+        <button
+          id="_btn-new-category"
+          type="button"
+          class="_default-button">
+          Registrar nova categoria
+        </button>
+      </header>
+
+      <div class="_wrapper-table">
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Categoria</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+          <tbody id="_table-body-categories">
+          </tbody>
+        </table>
+      </div>
+    </main>
+  </div>
+{% endblock content %}
+
+{% block modal %}
+  {% include "partials/modal-save-category.html" %}
+{% endblock modal %}
+
+{% block scripts %}
+  <script type="module" src="/scripts/categories.js"></script>
+{% endblock scripts %}

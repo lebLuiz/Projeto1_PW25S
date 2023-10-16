@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% set pageId = "page-not-found" %}
+
+{% block title %}
+  Não encontrado
+{% endblock title %}
+
+{% block styles %}
+  <link rel="stylesheet" href="/styles/not-found.css">
+{% endblock styles %}
+
+{% block content %}
+
+  <div class="_content">
+    {% include "partials/header-sidebar.html" %}
+
+    <div id="page-not-found">
+      <h1>Acho que você se perdeu...</h1>
+      <h2>Conteúdo não encontrado ou inválido!</h2>
+
+      <div class="img-not-found">
+        <img src="/assets/not_found.svg" alt="not_found">
+      </div>
+    </div>
+  </div>
+
+{% endblock content %}

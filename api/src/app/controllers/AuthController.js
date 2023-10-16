@@ -11,8 +11,9 @@ class AuthController {
       name,
       email,
       password,
-      confirmPassword,
+      confirm_password,
       role,
+      id_user_relation,
     } = request.body;
 
     if (!name) {
@@ -30,7 +31,7 @@ class AuthController {
         .json({ error: 'A senha é obrigatória!' });
     }
 
-    if (password !== confirmPassword) {
+    if (password !== confirm_password) {
       return response.status(402)
         .json({ error: 'As senhas não conferem!' });
     }
@@ -42,6 +43,14 @@ class AuthController {
         .json({ error: 'Por favor, utilize outro e-mail!' });
     }
 
+    if (id_user_relation) {
+      const userRelationExists = await UserRepository.findById(id_user_relation);
+      if (!userRelationExists) {
+        return response.status(404)
+          .json({ error: 'Usuário relacionado não encontrado!' });
+      }
+    }
+
     const newPassword = await createPassword(password);
     try {
       const userPayload = {
@@ -49,12 +58,13 @@ class AuthController {
         email,
         password: newPassword,
         role: role || 'DEFAULT',
+        id_user_relation: id_user_relation || null,
       };
 
       await UserRepository.create(userPayload);
 
       response.status(201)
-        .json({ error: 'Usuário criado com sucesso!' });
+        .json({ msg: 'Usuário criado com sucesso!' });
     } catch (error) {
       console.log(error);
       response.status(500)
@@ -91,13 +101,16 @@ class AuthController {
       const secret = process.env.SECRET;
       const token = jwt.sign(
         {
-          id: user._id,
+          id: user.id,
+          name: user.name,
+          role: user.role,
+          user_relation: user.user_relation,
         },
         secret,
       );
 
       response.status(200)
-        .json({ error: 'Autenticação realizada com sucesso!', token });
+        .json({ msg: 'Autenticação realizada com sucesso!', token });
     } catch (err) {
       console.log(err);
       response.status(500)

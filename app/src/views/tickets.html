@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+
+{% set pageId = "page-tickets" %}
+
+{% block styles %}
+  <link rel="stylesheet" href="/styles/modal-save-tec-user-relationship-ticket.css">
+  <link rel="stylesheet" href="/styles/tickets.css">
+{% endblock styles %}
+
+{% block content %}
+  <div class="_content">
+    {% include "partials/header-sidebar.html" %}
+
+    <main>
+      <header>
+        <h1>Tickets</h1>
+      </header>
+
+      <div class="_wrapper-table">
+        <table>
+          <thead id="_table-thead-tickets">
+            <tr>
+              <th>ID</th>
+              <th>Titulo</th>
+              <th>Categoria</th>
+              <th>Descrição</th>
+              <th>Status</th>
+              <th>Comentário do Técnico</th>
+            </tr>
+          </thead>
+          <tbody id="_table-body-tickets">
+          </tbody>
+        </table>
+      </div>
+    </main>
+  </div>
+{% endblock content %}
+
+{% block modal %}
+  {% include "partials/modal-save-ticket.html" %}
+  {% include "partials/modal-save-tec-user-relationship-ticket.html" %}
+  {% include "partials/modal-save-status-ticket.html" %}
+{% endblock modal %}
+
+{% block scripts %}
+  <script type="module" src="/scripts/tickets.js"></script>
+{% endblock scripts %}

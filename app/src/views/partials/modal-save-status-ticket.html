@@ -1,0 +1,44 @@
+<div id="modal-save-status-ticket" class="_default-modal hide">
+  <main>
+    <section class="content">
+      <header>
+        <h1>Vincular/Desvincular Status</h1>
+        <a href="#">Fechar</a>
+      </header>
+
+      <form id="_form-status-ticket" >
+        <fieldset>
+          <section class="_field-group">
+
+            <article class="_field">
+              <label for="status">* Status</label>
+              <select
+                class="_default-select"
+                name="status">
+              </select>
+            </article>
+
+            <article class="_field">
+              <label for="technical_comment">Comentário</label>
+              <textarea
+                class="_default-input"
+                name="technical_comment"
+                maxlength="155"
+                placeholder="Adicione um comentário sobre o problema">
+              </textarea>
+            </article>
+
+          </section>
+        </fieldset>
+
+        <button
+          class="_default-button"
+          type="submit"
+          id="_btn-submit-form-save-status-ticket">
+          Salvar
+          <img src="/assets/enviar.svg" alt="enviar">
+        </button>
+      </form>
+    </section>
+  </main>
+</div>

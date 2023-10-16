@@ -1,0 +1,28 @@
+._default-button {
+  height: 52px;
+  border: none;
+  padding: 0 16px;
+  background: var(--primary-neutral-80-opacity);
+  font-size: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+  font-weight: bold;
+  color: #1e0800;
+  border-radius: 4px;
+  transition: background 0.2s ease-in;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  margin-top: 12px;
+  gap: 0.5rem;
+}
+._default-button:hover {
+  background: var(--primary-neutral-70-opacity);
+}
+._default-button:active {
+  background: var(--primary-neutral-90);
+}
+._default-button[disabled] {
+  background: #CCC !important;
+  cursor: default !important;
+}

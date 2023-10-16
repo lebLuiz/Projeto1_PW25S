@@ -1,0 +1,11 @@
+
+#modal-save-tec-user-relationship-ticket main .content form ._field-group ._wrapper-btn-clear {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+#modal-save-tec-user-relationship-ticket main .content form ._field-group ._wrapper-btn-clear #_btn-clear-value-tec-user {
+  width: 162px;
+  padding: 8px;
+  border-radius: 8px;
+}

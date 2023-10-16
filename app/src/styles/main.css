@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&family=Sora:wght@400;700&display=swap');
+
+@import "./partials/button.css";
+@import "./partials/input.css";
+@import "./partials/select.css";
+@import "./partials/modal.css";
+@import "./partials/actions-buttons.css";
+@import "./partials/table.css";
+
+:root {
+  --title-color: #201e1e;
+  --primary: #F9A826;
+  --primary-neutral-0: #fff4db;
+  --primary-neutral-50-opacity: #ffe1b0;
+  --primary-neutral-70-opacity: #fdcd80;
+  --primary-neutral-80-opacity: #fab94f;
+  --primary-neutral-90: #df8c06;
+  --neutral-0: #FFF;
+  --neutral-10: #FAFAFA;
+  --neutral-20: #D3D7DB;
+  --neutral-30: #F2F2F2;
+  --neutral-40: #888888;
+  --neutral-50: #646464;
+  --neutral-90: #0f0e0e;
+  --gradient: linear-gradient(180deg, #f9a82680, #E2E2E2);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: 'Roboto', sans-serif;
+  font-family: 'Sora', sans-serif;
+}
+
+body {
+  background: var(--neutral-20);
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+button {
+  outline: none;
+  border: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Roboto', sans-serif;
+  font-family: 'Sora', sans-serif;
+  color: var(--title-color);
+}
+
+._content {
+  width: 90%;
+  max-width: 1100px;
+  height: 100%;
+  margin: 0 auto;
+  padding-bottom: 4rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
