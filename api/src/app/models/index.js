@@ -164,7 +164,7 @@ const Ticket = sequelize.define('Ticket', {
     allowNull: true,
     onDelete: 'SET NULL',
     references: {
-      model: 'Category',
+      model: 'categories',
       key: 'id',
     },
   },
